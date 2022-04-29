@@ -16,6 +16,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing...'
+                 sh "mvn -f Calculadora/backend/pom.xml -Dmaven.test.failure.ignore=false clean package"
             }
         }
     }
