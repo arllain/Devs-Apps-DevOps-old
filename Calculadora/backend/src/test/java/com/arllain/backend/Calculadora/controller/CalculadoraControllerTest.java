@@ -26,6 +26,6 @@ class CalculadoraControllerTest {
                 .param("n2", String.valueOf(3));
 
         MvcResult result = mockMvc.perform(request).andReturn();
-        assertEquals("9.0", result.getResponse().getContentAsString());
+        assertEquals("8.0", result.getResponse().getContentAsString());
     }
 }
