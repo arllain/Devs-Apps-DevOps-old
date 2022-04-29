@@ -10,7 +10,7 @@ pipeline {
             steps {
                 echo 'Building...'
                 // Run Maven on a Unix agent.
-                sh "mvn -Dmaven.test.failure.ignore=true clean package"
+                sh "mvn -f Calculadora/backend/pom.xml -Dmaven.test.failure.ignore=true clean package"
             }
         }
         stage('Test') {
